@@ -1,0 +1,94 @@
+.priceBlock {
+  background-color: #0087c9;
+  color: white;
+  display: flex;
+  justify-content: right;
+  height: 3rem;
+}
+
+.price {
+  font-weight: bold;
+  text-align: right;
+  margin: 0;
+}
+.priceDescription {
+  margin: 0;
+  font-size: 0.6rem;
+}
+
+.priceContainer {
+  margin-right: 0.5rem;
+}
+
+.bottomBlock {
+  background-color: #ffb168;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  height: 3rem;
+}
+
+.firstLeg {
+  border-bottom: 2px solid #0084c5;
+}
+
+.airports {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.airportUID {
+  color: #319ed1;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+}
+
+.airports,
+.datesAndDuration,
+.date,
+.duration {
+  display: flex;
+}
+
+.datesAndDuration {
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.date {
+  align-items: end;
+}
+.arrow {
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+.clock {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin: 0.2rem;
+  align-self: center;
+}
+
+.monthAndDay {
+  color: #319ed1;
+  margin-left: 0.2rem;
+  margin-right: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.transitLine,
+.directLine {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #bfbfbf;
+  line-height: 0.1rem;
+  margin: 0.5rem 0rem 1rem;
+}
+
+.transitLine span {
+  background: white;
+  padding: 0rem 0.3rem 0rem 0.3rem;
+  font-size: 0.7rem;
+  color: #ffb168;
+}

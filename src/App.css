@@ -1,0 +1,44 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.cardContainer {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topGreyBlock {
+  background-color: #d9d9d9;
+  height: 3rem;
+}
+
+.bottomGreyBlock {
+  background-color: #d9d9d9;
+  height: 8rem;
+}
+
+.filtersAndSortings,
+.sortings,
+.priceFilters,
+.transitFilters,
+.carrierFilters {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
