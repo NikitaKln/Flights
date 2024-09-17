@@ -26,6 +26,7 @@ function App() {
   });
   const [maxPrice, setMaxPrice] = useState(Infinity);
   const [minPrice, setMinPrice] = useState(0);
+  const [isFull, setIsFull] = useState(false);
 
   function filterFlights(data) {
     let filtered = data.filter(
@@ -115,10 +116,20 @@ function App() {
   }
 
   function handleAddMore() {
-    const filtteredFlights = filterFlights(flights.result.flights);
-    const extraItems = filtteredFlights.slice(ticketsShown, ticketsShown + 2);
-    setTickets((items) => [...items, ...extraItems]);
-    setTicketsShown(ticketsShown + 2);
+    const filteredFlights = filterFlights(flights.result.flights);
+    if (ticketsShown + 2 < filteredFlights.length) {
+      const extraItems = filteredFlights.slice(ticketsShown, ticketsShown + 2);
+      setTickets((items) => [...items, ...extraItems]);
+      setTicketsShown(ticketsShown + 2);
+    } else {
+      const extraItems = filteredFlights.slice(
+        ticketsShown,
+        filteredFlights.length
+      );
+      setTickets((items) => [...items, ...extraItems]);
+      setTicketsShown(filteredFlights.length);
+      setIsFull(true);
+    }
   }
 
   useEffect(() => {
@@ -282,8 +293,8 @@ function App() {
             ></input>
             Brussels Airlines
           </label>
-          <div className="bottomGreyBlock"></div>
         </div>
+        <div className="bottomGreyBlock"></div>
       </div>
       <div className="cardContainer">
         {tickets.length ? (
@@ -295,7 +306,7 @@ function App() {
         ) : (
           <div>Билетов не найдено</div>
         )}
-        {tickets.length ? (
+        {tickets.length && !isFull ? (
           <button onClick={handleAddMore}>Показать еще</button>
         ) : null}
       </div>

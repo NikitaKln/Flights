@@ -42,3 +42,10 @@ input[type="number"] {
   flex-direction: column;
   font-size: 0.8rem;
 }
+
+.sortings,
+.priceFilters,
+.transitFilters,
+.carrierFilters {
+  padding-left: 1rem;
+}

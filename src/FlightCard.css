@@ -36,6 +36,11 @@
 
 .airports {
   border-bottom: 1px solid #eeeeee;
+  padding-top: 0.5rem;
+}
+
+.carrier {
+  padding-bottom: 0.5rem;
 }
 
 .airportUID {
